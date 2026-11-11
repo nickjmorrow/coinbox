@@ -1,0 +1,13 @@
+.superpowers/
+.build/
+*.sqlite
+.DS_Store
+.env
+App/Coinbox.xcodeproj/
+App/build*/
+*.xcuserstate
+xcuserdata/
+
+*.noindex/
+CLAUDE.local.md
+docs/superpowers/
