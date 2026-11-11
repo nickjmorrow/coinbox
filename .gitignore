@@ -1,13 +1,26 @@
-.superpowers/
+# Build output
 .build/
-*.sqlite
-.DS_Store
-.env
-App/Coinbox.xcodeproj/
-App/build*/
-*.xcuserstate
-xcuserdata/
-
 *.noindex/
+App/build*/
+App/Coinbox.xcodeproj/
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+
+# Local data and secrets
+*.sqlite
+.env
 CLAUDE.local.md
+
+# macOS
+.DS_Store
+
+# Tool state and planning notes
+.superpowers/
 docs/superpowers/
+
+# Icon exploration (drafts, contact sheets, generator scripts); the final SVGs stay tracked
+design/icon/build*.mjs
+design/icon/r[0-9]-*.svg
+design/icon/sheet-*.png
