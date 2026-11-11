@@ -1,7 +1,7 @@
 import Foundation
 import GRDB
 
-/// A Coinbox database: exercises, routines, workouts and the op log.
+/// A Coinbox database: accounts, categories, transactions, the plan and the op log.
 public final class Coinbox: Sendable {
     public let db: DatabaseQueue
     public let device: String

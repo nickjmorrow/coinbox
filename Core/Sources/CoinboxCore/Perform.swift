@@ -82,7 +82,7 @@ extension Coinbox {
             let inverse = try decoder.decode(Op.self, from: Data((row["inverse"] as String).utf8))
             let keys = payload.entityKeys.union(inverse.entityKeys)
             // Later changes by others that are still in effect (including skipped ones). A change counts by what it wrote and
-            // by what it overwrote, so a merge that rewrote a routine blocks edits to that routine.
+            // by what it overwrote, so a merge that rewrote a transaction blocks edits to that transaction.
             let later = try Row.fetchAll(db, sql: """
                 SELECT payload, inverse FROM ops
                 WHERE local_id > ? AND undone_by IS NULL AND undoes IS NULL AND (author != ? OR local = 0)
